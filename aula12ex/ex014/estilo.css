@@ -1,0 +1,41 @@
+body {
+    background: #81a6eb;
+    font: normal 15pt Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+div {
+    text-align: center;
+    padding: 3px;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.438);
+}
+
+@media (max-width: 880px) {
+    section {
+        width: 80%;
+    }
+}
+
+#foto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}

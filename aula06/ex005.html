@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body {
+            background: #57dbd0;
+            color: #000000;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    
+    
+    <!-- 
+        DOM é um acrônimo para Document Object Model, ou seja, um modelo de objetos para documentos. 
+        Um cjto de objetos dentro do navegador que da acesso aos componentes internos do website. Ele está presente dentro do navegador. 
+        Qualquer coisa dentro da arvore DOM é considerado um elemento. E é possível selecionarmos os elementos por 1) marca 2) id 3) nome 4) classe e 5) seletor - querySelector
+        getElements em plural é necessário definir o número que você deseja entre colchetes []. Sendo 0 para o primeiro elemento que aparecer no html.
+        getElement em singular é, geralmente, para uso com o id, que é único.
+        Arvore DOM:
+        > window > 
+        location - document - history
+        > document > html > 
+        head - body
+        > head> meta - title...
+        > body > h1 - p - div...
+        > p > strong...
+    -->
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]
+        // o número entre colchetes é a primeira tag que aparece no nosso doc html.
+        var corpo = window.document.body
+        // window.document.write('Está escrito assim: ' + p1.innerText)
+        // corpo.style.background = 'black'
+        // p1.style.color = 'blue'
+        document.write(p1.innerHTML)
+        // o inner text recupera apenas o texto em questão e o inner html recupera também outras tags que podem estar modificando/formatado o texto, por exemplo a tag <strong>
+        // var d = window.document.getElementById('msg')
+        // d.style.background = 'green'
+        // d.innerText = 'Estou aguardando...'
+        var d = document.querySelector('div#msg')
+        d.style.color = 'blue'
+        
+    </script>
+</body>
+</html>
